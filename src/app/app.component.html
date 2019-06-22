@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+    <div class="w3-row">
+
+      <div class="w3-col m6">
+        <div class="w3-row-padding">
+          <div class="w3-col m12">
+            <div class="w3-card w3-round w3-white">
+              <div class="w3-container w3-padding">
+                <h6 class="w3-opacity">請輸入您的帳務</h6>
+                <form (ngSubmit)="addData()">
+                    名稱：<p><input class="w3-border w3-input" [(ngModel)]="name" name="name" type="text"/></p>
+                    金額：<p><input class="w3-border w3-input" [(ngModel)]="price" name="price" type="text"/></p>
+                    內容：<p><input class="w3-border w3-input" [(ngModel)]="content" name="content" type="text"/></p>
+                    日期：<p><input class="w3-border w3-input" [(ngModel)]="date" name="date" type="text"/></p>
+                    <p>
+                        <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  新增</button> 
+                    </p>
+                  </form>        
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m6">
+          <ng-container *ngFor="let data of datas; let i = index">
+          <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <span class="w3-right w3-opacity">
+                日期：{{ data.date }}
+            </span>
+            <h4>名稱：{{ data.name }}</h4>
+            <h4>金額：{{ data.price }}</h4>
+            <hr class="w3-clear">
+            <h4>內容：{{ data.content }}</h4>   
+            <button  class="w3-button w3-theme-d1 w3-margin-bottom w3-right " (click)="remove(i)"><i class="fa fa-trash"></i> 刪除</button> 
+          </div>
+          </ng-container>
+      </div>
+    </div>
+  </div>
+  
+<router-outlet></router-outlet>
