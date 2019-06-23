@@ -1,10 +1,10 @@
 export class Data {
     name: string;
-    price: string;
+    price: number;
     content: string;
-    date: string;
+    date: Date;
 
-    constructor(name: string, price: string, content: string , date: string) {
+    constructor(name: string, price: number, content: string , date: Date) {
 
         this.name = name;
         this.price = price;

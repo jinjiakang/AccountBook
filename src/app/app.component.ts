@@ -12,16 +12,16 @@ export class AppComponent {
   title = 'AccountBook';
 
   name = '';
-  price = '';
-  date = '';
+  price = 0;
+  date = new Date();
   content = '';
 
   datas: Data[] = [];
 
-  addData(): void {
+  addData() {
 
     if (this.name === '') {
-      return;
+      return null;
     }
      // 用名稱跟內容產生一個留言的資料物件
     const data = new Data(this.name, this.price , this.content, this.date);
@@ -29,12 +29,12 @@ export class AppComponent {
     this.datas.push(data);
      // 清空內容
     this.name = '';
-    this.price = '';
+    this.price = 0;
     this.content = '';
-    this.date = '';
+    this.date = new Date();
    }
 
-   remove(index: number): void {
+  remove(index: number): void {
     this.datas.splice(index, 1);
   }
 
