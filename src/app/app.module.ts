@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { PiechartComponent } from './piechart/piechart.component';
 import { ChartsModule } from 'ng2-charts';
 import { MyAccountComponent } from './my-account/my-account.component';
-
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
