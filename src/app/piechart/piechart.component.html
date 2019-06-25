@@ -1,0 +1,13 @@
+<div class="w3-container w3-content" style="max-width:1000px;margin-top:80px"> 
+  <p>
+    piechart works!
+  </p>
+
+  <div style="display: block">
+      <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+</div>

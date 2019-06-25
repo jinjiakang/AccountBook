@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PiechartComponent } from './piechart/piechart.component';
+import { ChartsModule } from 'ng2-charts';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PiechartComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
